@@ -9,16 +9,23 @@ import "./App.css";
 class App extends Component {
   state = {
     friends,
-    count: 0
+    count: 0,
+    topscore: 0
   };
 
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1});
+    this.setState({ topscore: this.state.count + 1})
   };
   removeFriend = id => {
     const friends = this.state.friends.filter(friend => friend.id !== id);
     this.setState({ friends });
   };
+
+  handleCardClick = () => {
+    const shuffleArray = friend => friends.sort(() => Math.random() - 0.5);
+    this.setState({ friends })
+  }
 
 render() {
   return (
@@ -26,6 +33,7 @@ render() {
       <Nav
       title='Clicky Game'
       score={this.state.count}
+      topscore={this.state.topscore}
     />
     <Title>Click on a card</Title>
       <Container>
@@ -37,7 +45,7 @@ render() {
                 removeFriend={this.handleIncrement}
                 handleIncrement={this.handleIncrement}
                 handleReset={this.handleReset}
-                handleShuffle={this.handleShuffle}
+                shuffleArray={this.shuffleArray}
                 id={friend.id}
                 image={friend.image}
               />
