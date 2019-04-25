@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "image": "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTQ3Mzg3OTQyMTQ5NTYzNTg1/chance_the_rapper_photo_by_matthew_eisman_getty_images_entertainment_getty_170863100.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "image": "https://cdn.vox-cdn.com/thumbor/8h3jkd5Dc540iEIFITYq40AHKWg=/0x330:2667x2108/1200x800/filters:focal(0x330:2667x2108)/cdn.vox-cdn.com/uploads/chorus_image/image/35171964/20131102_kkt_st3_046.0.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "image": "http://wallpapersdsc.net/wp-content/uploads/2016/08/Ashton-Kutcher-HD-Wallpaper.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "image": "https://cdn.vox-cdn.com/thumbor/TPnM0fZMvkV0668QbzGO3Yb8Y3c=/0x0:3000x2000/1200x800/filters:focal(1230x164:1710x644)/cdn.vox-cdn.com/uploads/chorus_image/image/62600948/81028080.jpg.0.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "image": "https://basketballforever.com/wp-content/uploads/2018/08/patty-660x400.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "image": "http://wallpapertop.net/wp-content/uploads/2018/04/The%20Weeknd%20HD%20pics.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "image": "https://cdn.vox-cdn.com/thumbor/mOXKZjBBKgme3cXuTBvLxC57Tqw=/0x0:1628x2443/1200x800/filters:focal(635x322:895x582)/cdn.vox-cdn.com/uploads/chorus_image/image/59292345/usa_today_10766957.0.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "image": "http://cdn01.cdn.justjared.com/wp-content/uploads/2012/11/brown-amasp/chris-brown-ludacris-swizz-beatz-amas-performance-02.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "image": "http://www.theballhog.net/wp-content/uploads/2015/09/reggie-jackson.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "image": "https://static.stereogum.com/uploads/2015/10/shmurda-640x427.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "image": "https://images.amcnetworks.com/blogs.amctv.com/wp-content/uploads/2012/03/TWD-S2-IronE-Singleton-Interview-560.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "image": "http://nba247365.com/wp-content/uploads/2011/10/zbo.jpg",
+        "clicked": false
+    }
+]
