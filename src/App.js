@@ -17,43 +17,53 @@ function shuffleFriends(array) {
 class App extends Component {
   state = {
     friends,
-    count: 0,
-    topscore: 0,
-    rightwrong: ""
+    currentScore: 0,
+    topScore: 0,
+    rightWrong: "",
+    clicked: [],
   };
 
   handleShuffle = () => {
-    let shuffledFriends = shuffleFriends(friends);
-    this.setState({ friends: shuffledFriends });
-    console.log(this.state.friends);
-  };
+    handleClick = id => {
+      if (this.state.clicked.indexOf(id) === -1) {
+        this.handleIncrement();
+        this.setState({ clicked: this.state.clicked.concat(id) });
+      } else {
+        this.handleReset();
+      }
+    };
   handleReset = () => {
     this.setState({ 
-      count: 0,
+      currentScore: 0,
       topscore: this.state.topscore,
-      rightwrong: "Nope!"
+      rightwrong: "Nope!",
+      clicked: []
      });
      this.handleShuffle();
   };
 
   handleIncrement = () => {
+    const newScore = this.state.currentScore +1;
     this.setState({
-    count: this.state.count + 1,
-    topscore: this.state.topscore +1,
+    currentScore: newScore,
     rightwrong: "That's right!"
-    })
+    });
 
     this.handleShuffle();
   };
-
+  handleShuffle = () => {
+    let shuffleFriends = shuffleFriends(friends);
+    this.setState ({ friends: shuffledFriends });
+  }
+    };
 render() {
   return (
     <Wrapper>
       <Nav
       title='Clicky Game'
-      score={this.state.count}
-      topscore={this.state.topscore}
-      rightwrong={this.state.rightwrong}
+      score={this.state.currentScore}
+      topScore={this.state.topScore}
+      rightWrong={this.state.rightWrong}
     />
     <Title>Click on a card</Title>
       <Container>
@@ -62,6 +72,7 @@ render() {
             <Column size="md-3 sm-6">
               <FriendCard
                 key={friend.id}
+                handleClick={this.handleClick}
                 handleIncrement={this.handleIncrement}
                 handleReset={this.handleReset}
                 id={friend.id}

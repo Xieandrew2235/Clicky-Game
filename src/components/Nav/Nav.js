@@ -8,14 +8,16 @@ const Nav = props => (
  <a href="/"> {props.title} </a>
  </li>
 
-<li id="rw">{props.rightwrong}</li>
+ <li id="rw">
+        {props.rightWrong}
+      </li>
 
 <li>
   Current Score: {props.score}
 </li>
 
 <li>
-  Top Score: {props.topscore}
+  Top Score: {props.topScore}
 </li>
 
 </ul>
