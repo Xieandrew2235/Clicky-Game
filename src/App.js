@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Container from "./Container";
+import Container from "./components/Container";
 import FriendCard from "./components/FriendCard";
 import friends from "./friends.json";
-import Row from "./Row";
-import Column from "./Column";
+import Row from "./components/Row";
+import Column from "./components/Column";
 import "./App.css";
 
 function shuffleFriends(array) {
