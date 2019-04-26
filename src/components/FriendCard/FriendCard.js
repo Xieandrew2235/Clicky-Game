@@ -1,14 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import "./FriendCard.css";
 
-const FriendCard = props => (
-    <div className="col s6 m4">
-    <div className="card" onClick={() => props.handleIncrement(props.id)}>
-      <div className="card-image">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <span onClick={() => props.removeFriend(props.id)} className="remove">
-      </span>
-    </div>
-  </div>
-);
+class FriendCard extends Component {
+    state = {
+        clicked: false
+    };
+
+    onClick = () => {
+        if (this.state.clicked === false) {
+            this.props.handleIncrement();
+            this.setState({ clicked: true });
+        }
+        else if (this.state.clicked === true) {
+            this.props.handleReset();
+        }
+    };
+
+    render() {
+            return (
+                <div className="card" onClick={this.onClick}>
+                    <div className="img-container">
+                        <img alt={this.props.name} src={this.props.image} />
+                    </div>
+                </div>
+            );
+        }
+    }
+
+
+    export default FriendCard
