@@ -13,5 +13,4 @@ const FriendCard = props => (
     </div>
   );
 
-
-    export default FriendCard
+export default FriendCard

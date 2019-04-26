@@ -35,21 +35,11 @@ class App extends Component {
     }
   };
 
-  handleReset = () => {
-    this.setState({
-      currentScore: 0,
-      topscore: this.state.topscore,
-      rightwrong: "Nope!",
-      clicked: []
-    });
-    this.handleShuffle();
-  };
-
   handleIncrement = () => {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
-      rightwrong: ""
+      rightWrong: ""
     });
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
@@ -60,6 +50,17 @@ class App extends Component {
     this.handleShuffle();
   };
 
+  handleReset = () => {
+    this.setState({
+      currentScore: 0,
+      topScore: this.state.topScore,
+      rightWrong: "Nope!",
+      clicked: []
+    });
+    this.handleShuffle();
+  };
+
+
   handleShuffle = () => {
     let shuffledFriends = shuffleFriends(friends);
     this.setState({ friends: shuffledFriends });
@@ -69,12 +70,16 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav
-          title='Clicky Game'
+          title="Clicky Game"
           score={this.state.currentScore}
           topScore={this.state.topScore}
           rightWrong={this.state.rightWrong}
         />
-        <Title>Click on a card to start!</Title>
+
+        <Title>Click on a card to start!
+          See if you can win!
+        </Title>
+
         <Container>
           <Row>
             {this.state.friends.map(friend => (
@@ -84,9 +89,9 @@ class App extends Component {
                   handleClick={this.handleClick}
                   handleIncrement={this.handleIncrement}
                   handleReset={this.handleReset}
+                  handleShuffle={this.handleShuffle}
                   id={friend.id}
                   image={friend.image}
-                  handleShuffle={this.handleShuffle}
                 />
               </Column>
             ))}
