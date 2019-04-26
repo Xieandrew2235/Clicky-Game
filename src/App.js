@@ -6,6 +6,14 @@ import FriendCard from "./components/FriendCard";
 import friends from "./friends.json";
 import "./App.css";
 
+function shuffleFriends(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 class App extends Component {
   state = {
     friends,
@@ -15,11 +23,9 @@ class App extends Component {
   };
 
   handleShuffle = () => {
-    for (let i = friends.length -1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i+1));
-      [friends[i],friends[j]] = [friends[j], friends[i]];
-    }
-    console.log(friends);
+    let shuffledFriends = shuffleFriends(friends);
+    this.setState({ friends: shuffledFriends });
+    console.log(this.state.friends);
   };
   handleReset = () => {
     this.setState({ 
@@ -33,6 +39,7 @@ class App extends Component {
   handleIncrement = () => {
     this.setState({
     count: this.state.count + 1,
+    topscore: this.state.topscore +1,
     rightwrong: "That's right!"
     })
 
