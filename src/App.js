@@ -61,7 +61,7 @@ class App extends Component {
   };
 
   handleShuffle = () => {
-    let shuffleFriends = shuffleFriends(friends);
+    let shuffledFriends = shuffleFriends(friends);
     this.setState({ friends: shuffledFriends });
   };
 
