@@ -77,7 +77,7 @@ class App extends Component {
         />
 
         <Title>Click on a card to start!
-          See if you can win!
+          See if you can win! The game will reset if you click on the same card twice!
         </Title>
 
         <Container>
